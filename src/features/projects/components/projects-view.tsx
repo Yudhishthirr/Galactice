@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Kbd } from "@/components/ui/kbd";
 
 import { ProjectsList } from "./projects-list";
-// import { ProjectsCommandDialog } from "./projects-command-dialog";
+import { ProjectsCommandDialog } from "./projects-command-dialog";
 // import { ImportGithubDialog } from "./import-github-dialog";
 // import { NewProjectDialog } from "./new-project-dialog";
 
@@ -24,6 +24,8 @@ export const ProjectsView = () => {
   const [importDialogOpen, setImportDialogOpen] = useState(false);
   const [newProjectDialogOpen, setNewProjectDialogOpen] = useState(false);
 
+  // this is keyboard shortcuts for opening the command dialog
+  // when user presses cmd+k or ctrl+k it set setCommandDialogOpen true 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.metaKey || e.ctrlKey) {
@@ -49,10 +51,10 @@ export const ProjectsView = () => {
 
   return (
     <>
-      {/* <ProjectsCommandDialog
+      <ProjectsCommandDialog
         open={commandDialogOpen}
         onOpenChange={setCommandDialogOpen}
-      /> */}
+      />
       {/* <ImportGithubDialog
         open={importDialogOpen}
         onOpenChange={setImportDialogOpen}
@@ -67,7 +69,7 @@ export const ProjectsView = () => {
           <div className="flex justify-between gap-4 w-full items-center">
 
             <div className="flex items-center gap-2 w-full group/logo">
-              <img src="/logo.svg" alt="Polaris" className="size-[32px] md:size-[46px]" />
+              <img src="/logo3.svg" alt="Polaris" className="size-[32px] md:size-[46px]" />
               <h1 className={cn(
                 "text-4xl md:text-5xl font-semibold",
                 font.className,
