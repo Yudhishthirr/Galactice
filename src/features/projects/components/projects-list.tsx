@@ -94,6 +94,8 @@ const ProjectItem = ({
   );
 };
 
+
+// fetch the projects form the useProjectsPartial hook and putinto the continue card and project item components
 export const ProjectsList = ({ 
   onViewAll
 }: ProjectsListProps) => {
@@ -104,7 +106,7 @@ export const ProjectsList = ({
   }
 
   const [mostRecent, ...rest] = projects;
-
+  // (from index 1 to the end rest) and  (from index 0  mostRecent)
   return (
     <div className="flex flex-col gap-4">
       {mostRecent ? <ContinueCard data={mostRecent} /> : null}

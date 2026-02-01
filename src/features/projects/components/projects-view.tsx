@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Kbd } from "@/components/ui/kbd";
 
-// import { ProjectsList } from "./projects-list";
+import { ProjectsList } from "./projects-list";
 // import { ProjectsCommandDialog } from "./projects-command-dialog";
 // import { ImportGithubDialog } from "./import-github-dialog";
 // import { NewProjectDialog } from "./new-project-dialog";
@@ -72,7 +72,7 @@ export const ProjectsView = () => {
                 "text-4xl md:text-5xl font-semibold",
                 font.className,
               )}>
-                Polaris
+                Galactic
               </h1>
             </div>
 
@@ -97,6 +97,7 @@ export const ProjectsView = () => {
                   </span>
                 </div>
               </Button>
+              
               <Button
                 variant="outline"
                 onClick={() => setImportDialogOpen(true)}
@@ -116,7 +117,7 @@ export const ProjectsView = () => {
               </Button>
             </div>
 
-            {/* <ProjectsList onViewAll={() => setCommandDialogOpen(true)} /> */}
+            <ProjectsList onViewAll={() => setCommandDialogOpen(true)} />
 
           </div>
 
