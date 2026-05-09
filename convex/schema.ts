@@ -43,6 +43,13 @@ export default defineSchema({
     .index("by_parent", ["parentId"])
     .index("by_project_parent", ["projectId", "parentId"]),
 
+// Project A (projectId)
+// │
+// ├── file1.txt        parentId = null
+// ├── src/             parentId = null
+// │   ├── index.ts     parentId = src.id
+// │   └── utils.ts     parentId = src.id
+
   conversations: defineTable({
     projectId: v.id("projects"),
     title: v.string(),
