@@ -51,6 +51,8 @@
     "@replit/codemirror-indentation-markers": "^6.5.3",
     "@replit/codemirror-minimap": "^0.5.2",
     "@sentry/nextjs": "^10.38.0",
+    "@xterm/addon-fit": "^0.11.0",
+    "@xterm/xterm": "^6.0.0",
     "ai": "^6.0.64",
     "allotment": "^1.20.5",
     "class-variance-authority": "^0.7.1",
@@ -74,7 +76,9 @@
     "react-resizable-panels": "^4.4.1",
     "recharts": "^2.15.4",
     "sonner": "^2.0.7",
+    "streamdown": "^2.5.0",
     "tailwind-merge": "^3.4.0",
+    "use-stick-to-bottom": "^1.1.4",
     "vaul": "^1.1.2",
     "zod": "^4.3.5",
     "zustand": "^5.0.11"
