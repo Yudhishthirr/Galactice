@@ -9,7 +9,7 @@ import { EditorView } from "@/features/editor/components/editor-view";
 
 import { FileExplorer } from "./file-explorer";
 import { Id } from "../../../../convex/_generated/dataModel";
-// import { PreviewView } from "./preview-view";
+import { PreviewView } from "./preview-view";
 // import { ExportPopover } from "./export-popover";
 
 const MIN_SIDEBAR_WIDTH = 200;
@@ -90,7 +90,7 @@ export const ProjectIdView = ({
           activeView === "preview" ? "visible" : "invisible"
         )}>
       
-          <div>PreviewView</div>
+          <PreviewView projectId={projectId} />
         </div>
       </div>
     </div>

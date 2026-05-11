@@ -14,13 +14,15 @@ const requestSchema = z.object({
 });
 
 export async function POST(request: Request) {
+
+  console.log("Received request to send message");  
   const { userId } = await auth();
 
   if (!userId) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const internalKey = process.env.POLARIS_CONVEX_INTERNAL_KEY;
+  const internalKey = process.env.GALACTIC_CONVEX_INTERNAL_KEY;
 
   if (!internalKey) {
     return NextResponse.json(
@@ -114,4 +116,11 @@ export async function POST(request: Request) {
     eventId: event.ids[0],
     messageId: assistantMessageId,
   });
+
+
+  // return NextResponse.json({
+  //   success: true,
+  //   eventId: "vvv",
+  //   messageId: "assistantMessageId",
+  // });
 };

@@ -62,8 +62,7 @@ export const ConversationSidebar = ({
   const createConversation = useCreateConversation();
   const conversations = useConversations(projectId);
 
-  const activeConversationId =
-    selectedConversationId ?? conversations?.[0]?._id ?? null;
+  const activeConversationId = selectedConversationId ?? conversations?.[0]?._id ?? null;
 
   const activeConversation = useConversation(activeConversationId);
   const conversationMessages = useMessages(activeConversationId);
@@ -115,6 +114,7 @@ export const ConversationSidebar = ({
     }
 
     // Trigger Inngest function via API
+    console.log("trigring the inngest job ")
     try {
       await ky.post("/api/messages", {
         json: {
